@@ -1,0 +1,10 @@
+# Local agent/editor settings — not part of the shared skill
+.claude/
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Local flashcard store, if anyone keeps it inside the repo
+cards.json
